@@ -1,9 +1,11 @@
 import java.util.Scanner;
 public class App {
   
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         Scanner sc = new Scanner(System.in);
         int opciones;
+
+        Restaurante restaurante = new Restaurante();
 		
         do {
 		
@@ -21,7 +23,7 @@ public class App {
 			opciones = sc.nextInt();
 			
 			switch(opciones) {
-			case 1 -> {}
+			case 1 -> {restaurante.registrarMesa();}
 			case 2 -> {}
 			case 3 -> {}
 			case 4 -> {}
@@ -29,6 +31,8 @@ public class App {
 			case 6 -> {}
 			case 7 -> {}
 			case 8 -> {}
+            default -> System.out.println("Valor incorrecto, pruebe de nuevo"); 
+
 			}
 		
 		// Se ejecuta siempre que no se introduzca el 9
