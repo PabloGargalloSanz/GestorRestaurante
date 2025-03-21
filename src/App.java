@@ -24,7 +24,7 @@ public class App {
 			
 			switch(opciones) {
 			case 1 -> {restaurante.registrarMesa();}
-			case 2 -> {restaurante.registrarPlato();}
+			case 2 -> {restaurante.registrarPlatoCarta();}
 			case 3 -> {}
 			case 4 -> {}
 			case 5 -> {}
