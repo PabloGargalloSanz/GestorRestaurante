@@ -34,8 +34,8 @@ public class App {
 
 			}
 		
-		// Se ejecuta siempre que no se introduzca el 9
-		}while (opciones != 9);
+		// Se ejecuta siempre que no se introduzca el 8
+		}while (opciones != 8);
 		
 		
 	}
