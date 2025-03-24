@@ -14,19 +14,18 @@ public class App {
 			System.out.println("Opción 2: Registrar plato");
 			System.out.println("Opción 3: Regitrar pedido");
 			System.out.println("Opción 4: Modificar pedido");
-			System.out.println("Opción 5: Borrar pedido");
-			System.out.println("Opción 6 Modificar o borrar plato");
-			System.out.println("Opción 7: Guradar datos");
-			System.out.println("Opción 8: Cargar datos");
-			System.out.println("Opción 9: Salir");
+			System.out.println("Opción 5 Modificar o borrar plato");
+			System.out.println("Opción 6: Guradar datos");
+			System.out.println("Opción 7: Cargar datos");
+			System.out.println("Opción 8: Salir");
 			
 			opciones = sc.nextInt();
 			
 			switch(opciones) {
 			case 1 -> {restaurante.registrarMesa();}
 			case 2 -> {restaurante.registrarPlatoCarta();}
-			case 3 -> {}
-			case 4 -> {}
+			case 3 -> {restaurante.registrarPedido();}
+			case 4 -> {restaurante.menuModificarPedido();}
 			case 5 -> {}
 			case 6 -> {}
 			case 7 -> {}

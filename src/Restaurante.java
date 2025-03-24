@@ -221,14 +221,14 @@ public class Restaurante {
                 } while (!control);
             }
             case 4 -> { pedido.setMesa(this.mesaByNumber()); }
-            case 5 -> {}
-            case 6 -> {}
+            case 5 -> { int descuento = 10; pedido.aplicarDescuento(descuento); }
+            case 6 -> { 
+                this.pedidos.remove(pedido);
+                System.out.println( "Pedido borrado correctamente");
+            }
                                 
             default -> System.out.println("Valor incorrecto, pruebe de nuevo"); 
 
         }
     }
-
-    
-    
 }
