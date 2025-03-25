@@ -10,6 +10,7 @@ public class Restaurante {
     LinkedList<Mesa> mesas = new LinkedList<>();
     LinkedList<Plato> cartaPlatos = new LinkedList<>();
     LinkedList<Pedido> pedidos = new LinkedList<>();
+    LinkedList<Object>[] getDatos;
     
     public void registrarMesa() {
 
@@ -109,10 +110,7 @@ public class Restaurante {
                 }
             }
         }
-        System.out.println("Introduce codigo de pedido");
-
-        String codigoPedido = sc.next();
-
+        
         Pedido pedido = new Pedido(mesaEncontrada, listaPlatosPedidos);
         pedidos.add(pedido);
         System.out.println("Pedido añadido correctamente");
@@ -222,7 +220,7 @@ public class Restaurante {
                 } while (!control);
             }
             case 4 -> { pedido.setMesa(this.mesaByNumber()); }
-            case 5 -> { int descuento = 10; pedido.aplicarDescuento(descuento); }
+            case 5 -> { pedido.aplicarDescuento(10); }
             case 6 -> { 
                 this.pedidos.remove(pedido);
                 System.out.println( "Pedido borrado correctamente");
@@ -300,13 +298,12 @@ public class Restaurante {
         datos[0] = this.mesas;
         datos[1] = this.cartaPlatos;
         datos[2] = this.pedidos;
-
         return datos;
     }
 
     public void setDatos(LinkedList<?>[] datos) {
         this.mesas = (LinkedList<Mesa>) datos[0];
-        this.cartaPlatos = (LinkedList<Plato>) datos[0];
+        this.cartaPlatos = (LinkedList<Plato>) datos[1];
         this.pedidos = (LinkedList<Pedido>) datos[2];
     }
 }

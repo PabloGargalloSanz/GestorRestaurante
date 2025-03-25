@@ -7,6 +7,7 @@ public class App {
         int opciones;
 
         Restaurante restaurante = new Restaurante();
+		restaurante.setDatos(Persistencia.cargarDatos());
 		
         do {
 		
@@ -37,9 +38,14 @@ public class App {
 				LinkedList<?>[] datos = Persistencia.cargarDatos();
 				restaurante.setDatos(datos);
 			}
-			
+			case 8 -> {
+				Persistencia.guardarDatos(restaurante.getDatos());
+				System.out.println("Saliendo del programa...");
+			}
+
             default -> System.out.println("Valor incorrecto, pruebe de nuevo"); 
 
+			
 			}
 		
 		// Se ejecuta siempre que no se introduzca el 8
