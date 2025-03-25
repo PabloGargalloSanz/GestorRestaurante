@@ -1,3 +1,4 @@
+import java.util.LinkedList;
 import java.util.Scanner;
 public class App {
   
@@ -26,10 +27,17 @@ public class App {
 			case 2 -> {restaurante.registrarPlatoCarta();}
 			case 3 -> {restaurante.registrarPedido();}
 			case 4 -> {restaurante.menuModificarPedido();}
-			case 5 -> {}
-			case 6 -> {}
-			case 7 -> {}
-			case 8 -> {}
+			case 5 -> {restaurante.menuModificarPlato();}
+			case 6 -> {
+				LinkedList<Object>[] datos = restaurante.getDatos();
+				Persistencia.guardarDatos(datos);
+	
+			}
+			case 7 -> {
+				LinkedList<?>[] datos = Persistencia.cargarDatos();
+				restaurante.setDatos(datos);
+			}
+			
             default -> System.out.println("Valor incorrecto, pruebe de nuevo"); 
 
 			}
